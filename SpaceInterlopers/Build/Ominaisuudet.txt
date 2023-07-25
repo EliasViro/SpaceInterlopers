@@ -1,0 +1,55 @@
+Projekti on testattu ja toimii Windowsilla. Tavoittelen arvosanaa 5.
+
+
+
+Ominaisuudet:
+
+- Pelissä on äänet ja musiikki.
+
+- Alkuvalikko
+	* voidaan säätää musiikin ja äänten voimakkuutta erikseen
+	* voidaan aloittaa uuden pelin tai jatkaa, jos tallennus on olemassa
+	* voidaan sulkea peli
+
+- Yksi loputon taso, joka generoi uusia vihollisia dynaamisesti suurempina aaltoina.
+	* teoriassa siis loputtomasti tasoja
+
+- "Peli päättyi"-ruutu
+	* näytetään, kun pelaajan alus tuhoutuu
+	* näyttää pelaajan lopullisen pistesaaliin
+	* antaa pelaajan palata takaisin alkuvalikkoon tai aloittaa uuden pelikerran saman tien
+
+- Vihollisten spawnaussijaintien satunnaistus muutaman vaihtoehdon välillä tyypistä riippuen.
+
+- Seitsemän erilaista vihollistyyppiä:
+	* tavallinen: liikkuu suoraan, ampuu silloin tällöin
+	* haulikko: liikkuu suoraan, ampuu kolme ammusta kerralla kartiona
+	* tykkialus: liikkuu suoraan, ampuu yhden ammuksen viistosti vuorotellen oikealle tai vasemmalle
+	* väistelevä: liikkuu alaspäin nopeammin ja lentää muutaman sekunnin välein sivuttain vuorotellen oikealle tai vasemmalle
+	* rahtialus: lentää sivuttain kentän poikki, pudottaa tuhoutuessaan pelaajalle lisäelämän poimittavaksi, ei ammu
+	* sivuttainen: lentää sivuttain kentän poikki ampuen samalla, pudottaa pelaajalle aseboostin poimittavaksi
+	* päävastus: spawnataan jokaisen dynaamisen tason välissä. Liikkuu sivuttain vaihdellen suuntaa, ampuu haulikkomaisesti, kestää 10 osumaa
+
+- Itse tehdyt spritet.
+
+- Väistelevillä vihollisilla ja pelaajan aluksella on erilaiset spritet riippuen, liikkuuko kohde suoraan vai kääntyykö se.
+	* periaatteessa siis liikkeestä riippuvia animaatioita
+
+- Ammuksista tuhoutuvat suojat, jotka spawnataan uudelleen aina päävastuksen voittamisen jälkeen.
+
+- Pelaajan alus tuhoutuu kun sen kestävyyspisteet laskevat nollaan, maksimi kolme.
+	* pelaaja voi saada kestävyyspisteitä takaisin tuhoamalla rahtialuksia tai aina yhden pisteen päävastuksen voitettuaan
+
+- Pelinaikainen UI:
+	* pisteytys
+	* pelaajan aluksen kestävyyspisteet
+	* nappi päävalikkoon palaamiseen
+
+- Peliä ei voi päästä läpi, koska kyseessä on arcade-tyylinen "hanki mahdollisimman monta pistettä" -peli.
+
+- Pelin pelattavuus on miellyttävää.
+
+- Tallennusjärjestelmä:
+	* peli tallennetaan aina päävastuksen voittamisen jälkeen
+	* tallennus tuhotaan, jos pelaaja kuolee tai lataa tallennuksen kerran: tuhoaminen "savescummauksen" välttämiseksi, ns. "exit save"
+	* jos tallennus on olemassa, alkuvalikossa annetaan mahdollisuus jatkaa peliä
